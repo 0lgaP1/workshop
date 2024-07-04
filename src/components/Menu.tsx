@@ -19,8 +19,6 @@ const List = styled.ul`
 const ListItem = styled.li`
     gap: 5px;
     display: flex;
-    
-    
 `
 export const items = [
     {
