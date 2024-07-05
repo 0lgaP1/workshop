@@ -1,12 +1,12 @@
 import React from 'react';
-// import {S} from '../Header_Styles';
 import styled from "styled-components";
 
 type PropsMenu = {
     items: {
         id: number,
         title: string,
-        href: string
+        href: string,
+        imgSrc: string,
     }[]
 }
 const List = styled.ul`
@@ -23,38 +23,45 @@ const ListItem = styled.li`
 export const items = [
     {
         id: 1,
-        title: "Register now",
-        href: "registration"
+        title: "Workshop schedule",
+        href: "registration",
+        imgSrc: "../assets/schedule.jpg"
     },
     {
         id: 2,
-        title: "Video library",
-        href: "video"
+        title: "Markets",
+        href: "markets",
+        imgSrc: "../assets/markets.jpg"
     },
     {
         id: 3,
         title: "Gallery",
-        href: "gallery"
+        href: "gallery",
+        imgSrc: "../assets/schedule.jpg"
     },
     {
         id: 4,
-        title: "News",
-        href: "news"
+        title: "Testimony",
+        href: "about",
+        imgSrc: "../assets/testimonials.jpg"
     },
     {
         id: 5,
         title: "Shop",
-        href: "shop"
+        href: "shop",
+        imgSrc: "../assets/schedule.jpg"
     },
     {
         id: 6,
         title: "About us",
-        href: "about"
+        href: "about",
+        imgSrc: "../assets/schedule.jpg"
     },
     {
         id: 7,
         title: "Contact",
-        href: "contact"
+        href: "contact",
+        imgSrc: "../assets/contacts.jpg"
     }]
 export const Menu: React.FC<PropsMenu> = ({items}) => {
 
@@ -63,7 +70,9 @@ export const Menu: React.FC<PropsMenu> = ({items}) => {
                 <List>
                     {items.map(item => (
                         <ListItem key={item.id}>
-                            <a href={item.href}>{item.title}</a>
+                            <a href={item.href}>
+                                <img src={item.imgSrc} alt={item.title}/>
+                                {item.title}</a>
                         </ListItem>
                     ))}
                 </List>

@@ -11,7 +11,7 @@ export const Header = (props: Props) => {
 
     return (
         <div style={headerInlineStyles}>
-            This is header div
+            A place where inspiration lives
         </div>
     );
 };
