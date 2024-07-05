@@ -22,7 +22,7 @@ const footerIconsArray = [
 export const Footer = () => {
     return (
         <S.Footer>
-            <S.Name>Olga Patapchuk</S.Name>
+            <S.Name>Woodworking shop</S.Name>
             <S.SocialList>
                 {footerIconsArray.map((i, index) => {
                     return (
@@ -39,6 +39,7 @@ export const Footer = () => {
                     )
                 })}
             </S.SocialList>
+            <S.Copyright>Developed by Olga Patapchuk</S.Copyright>
         </S.Footer>
     );
 };

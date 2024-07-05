@@ -2,9 +2,8 @@ import styled from "styled-components";
 
 const Footer = styled.footer`
     background-color: cornflowerblue;
-    padding: 20px 0;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
 `
 
